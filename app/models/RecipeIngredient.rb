@@ -8,7 +8,8 @@ class RecipeIngredient
         @recipe = recipe
         @@all << self
     end
-    
+
+
     def self.all
         @@all
     end

@@ -39,7 +39,7 @@ class Recipe
     end
 
     def add_ingredients(ingredient_array)
-       RecipeIngredient.new(ingredient_array, self)
+        ingredient_array.each {|item| RecipeIngredient.new(item, self)}
     end
 
     def self.all

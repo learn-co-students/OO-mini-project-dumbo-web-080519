@@ -16,7 +16,7 @@ Build the following methods on the Recipe class
 <!-- - `Recipe.most_popular` -->
 <!-- should return the recipe instance with the highest number of users (the recipe that has the most recipe cards) -->
 - `Recipe#users`
-should return the user instances who have recipe cards with this recipe
+<!-- should return the user instances who have recipe cards with this recipe -->
 - `Recipe#ingredients`
 should return all of the ingredients in this recipe
 - `Recipe#allergens`
@@ -36,15 +36,15 @@ Build the following methods on the User class
 - `User.all`
 <!-- should return all of the user instances -->
 - `User#recipes`
-should return all of the recipes this user has recipe cards for
+<!-- should return all of the recipes this user has recipe cards for -->
 - `User#add_recipe_card`
-should accept a recipe instance as an argument, as well as a date and rating, and create a new recipe card for this user and the given recipe
+<!-- should accept a recipe instance as an argument, as well as a date and rating, and create a new recipe card for this user and the given recipe -->
 - `User#declare_allergy`
-should accept an`Ingredient` instance as an argument, and create a new `Allergy` instance for this `User` and the given `Ingredient`
+<!-- should accept an`Ingredient` instance as an argument, and create a new `Allergy` instance for this `User` and the given `Ingredient` -->
 - `User#allergens`
-should return all of the ingredients this user is allergic to
+<!-- should return all of the ingredients this user is allergic to -->
 - `User#top_three_recipes`
-should return the top three highest rated recipes for this user.
+<!-- should return the top three highest rated recipes for this user. -->
 - `User#most_recent_recipe`
 should return the recipe most recently added to the user's cookbook.
 
@@ -67,7 +67,7 @@ Build the following methods on the RecipeCard class:
 Build the following methods on the Ingredient class
 
 - `Ingredient.all`
-should return all of the ingredient instances
+<!-- should return all of the ingredient instances -->
 - `Ingredient.most_common_allergen`
 should return the ingredient instance that the highest number of users are allergic to
 

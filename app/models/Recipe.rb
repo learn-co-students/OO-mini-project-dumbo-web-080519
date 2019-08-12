@@ -33,4 +33,22 @@ class Recipe
         (self.recipe_cards.map {|card| card.user}).uniq
     end
 
+    def recipe_ingredients
+        RecipeIngredient.all.select {|recipe_ingredient| recipe_ingredient.recipe == self}
+    end
+
+    def ingredients
+        self.recipe_ingredients.map {|recipe_ingredient| recipe_ingredient.ingredient}
+    end
+
+    def add_ingredients(ingredients_array)
+        ingredients_array.each do |ingredient|
+            RecipeIngredient.new(ingredient, self)
+        end
+    end
+
+    def allergens
+        self.ingredients.select {|ingredient| Allergy.all_ingredients.include?(ingredient)}
+    end
+
 end

@@ -25,8 +25,25 @@ class User
         RecipeCard.new(self, recipe, rating, date)
     end
 
+    def top_three_recipes
+        top_cards = self.recipe_cards.max_by(3) {|recipe| recipe.rating}
+        top_cards.map {|card| card.recipe}
+    end
+
+    def most_recent_recipe
+        
+    end
+
     def declare_allergy(ingredient)
         Allergy.new(self, ingredient)
+    end
+
+    def allergies
+        Allergy.all.select {|allergy| allergy.user == self}
+    end
+
+    def allergens
+        self.allergies.map {|allergy| allergy.ingredient}.uniq
     end
 
 end

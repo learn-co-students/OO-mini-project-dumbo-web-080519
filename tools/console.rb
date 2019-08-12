@@ -16,6 +16,9 @@ card2 = RecipeCard.new(user2, recipe3, 7, "8/12/2019")
 card3 = RecipeCard.new(user3, recipe1, 2, "8/12/2019")
 card4 = RecipeCard.new(user1, recipe3, 2, "8/12/2019")
 
+eggs = Ingredient.new("eggs")
+milk = Ingredient.new("milk")
+
 
 
 

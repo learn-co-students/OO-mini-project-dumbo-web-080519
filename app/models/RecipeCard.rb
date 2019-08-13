@@ -1,6 +1,7 @@
 class RecipeCard
 
-    attr_reader :user, :recipe, :date, :rating
+    attr_reader :user, :recipe, :rating
+    attr_accessor :date
 
     @@all = []
 
@@ -8,13 +9,10 @@ class RecipeCard
         @user = user
         @rating = rating.round
         @recipe = recipe
-        puts "Enter date for #{user.name}'s #{recipe.name} recipe (MM/DD/YYYY):"
-        date = gets.chomp
-        if date.length == 10 && date[2] == "/" && date[5] == "/"
-            @date = date
-        else
-            raise "Invalid date. Please try again."
-        end
+        day = Time.now.day < 10 ? "0#{Time.now.day}" : Time.now.day.to_s
+        month = Time.now.month < 10 ? "0#{Time.now.month}" : Time.now.month.to_s
+        year = Time.now.year.to_s
+        @date = "#{month}/#{day}/#{year}"
         @@all << self
     end
 

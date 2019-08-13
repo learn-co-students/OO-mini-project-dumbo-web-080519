@@ -38,9 +38,9 @@ class User
             current_array = [self.recipe_cards[counter].date[0..1], self.recipe_cards[counter].date[3..4], self.recipe_cards[counter].date[6..9]]
             if current_array[2] > most_recent_array[2]
                 most_recent = self.recipe_cards[counter]
-            elsif (current_array[2] == most_recent_array[2]) && (current_array[1] > most_recent_array[1])
+            elsif (current_array[2] == most_recent_array[2]) && (current_array[0] > most_recent_array[0])
                 most_recent = self.recipe_cards[counter]
-            elsif (current_array[2] == most_recent_array[2]) && (current_array[1] == most_recent_array[1]) && (current_array[0] >= most_recent_array[0])
+            elsif (current_array[2] == most_recent_array[2]) && (current_array[0] == most_recent_array[0]) && (current_array[1] >= most_recent_array[1])
                 most_recent = self.recipe_cards[counter]
             end
             counter += 1

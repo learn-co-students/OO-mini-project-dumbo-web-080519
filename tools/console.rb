@@ -38,7 +38,5 @@ stew_onion = RecipeIngredient.new(onion, stew)
 chowder_onion = RecipeIngredient.new(onion, chowder)
 
 
-
-
 binding.pry
 0

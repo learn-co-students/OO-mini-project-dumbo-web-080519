@@ -49,6 +49,8 @@ class User
   def allergens
     Allergy.all.select do |allergy|
       allergy.user == self
+    end.map do |users_allergy|
+      users_allergy.ingredient
     end
   end
 

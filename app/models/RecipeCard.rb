@@ -17,21 +17,6 @@ class RecipeCard
     @@all
   end
 
-  def rating
-
-  end
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

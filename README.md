@@ -11,8 +11,8 @@ We've provided you with a console that you can use to test your code. To enter a
 ### `Recipe`
 Build the following methods on the Recipe class
 
-<!-- - `Recipe.all`
-should return all of the recipe instances -->
+- `Recipe.all`
+should return all of the recipe instances
 - `Recipe.most_popular`
 should return the recipe instance with the highest number of users (the recipe that has the most recipe cards)
 - `Recipe#users`

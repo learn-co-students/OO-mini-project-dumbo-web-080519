@@ -1,5 +1,5 @@
 class Recipe
-    attr_reader :ingredients, :name
+    attr_reader :name
     @@all = []
 
     def initialize(name)
@@ -36,6 +36,11 @@ class Recipe
 
     def users
         recipe_cards.map {|card| card.user}
+    end
+
+    def ingredients
+        recipe_ingredients = RecipeIngredient.all.select {|recipe| recipe.recipe == self}
+        recipe_ingredients.map {|recipe| recipe.ingredient}
     end
 
     def add_ingredients(ingredient_array)

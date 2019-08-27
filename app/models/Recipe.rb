@@ -21,13 +21,28 @@ end
 
 
 #returns an array of user objects for 
-def self.get_users_for_recipe_card
+def self.get_recipe_card_recipe
 
     cards = RecipeCard.all #array of cards
-    cards.map{ |card| card.user } #goes into one card and retrieves the user
+    cards.map{ |card| card.recipe } #returns an array of recipes
 end 
 
 def most_popular
+    
+
+    recipes = self.get_recipe_card_recipe #an array of recipes
+    recipe_counter_hash = {}
+
+    #check each recipe
+    recipes.each {|recipe| 
+        if recipe_counter_hash[recipe] 
+            recipe_counter_hash[recipe] += 1
+        else
+            recipe_counter_hash[recipe] = 1
+        end
+        }
+
+    recipe_counter_hash.key(recipe_counter_hash.values.max)
 
 end
 
